@@ -5,7 +5,7 @@ host = "127.0.0.1"
 username = "root"
 attempts = 0
 
-with open("ssh-common-passwords.txt", "r") as password_list
+with open("ssh-common-passwords.txt", "r") as password_list:
     for password in password_list:
         password = password.strip("\n")
         try:

